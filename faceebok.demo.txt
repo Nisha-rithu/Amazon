@@ -1,0 +1,30 @@
+package Com.ipt;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Facebook  extends Baseclass{
+	public static WebDriver driver;
+	public static void main(String[] args) throws IOException {
+		driver = browserLaunch("chrome");
+		launchUrl("https://www.facebook.com/");
+		
+		WebElement email = driver.findElement(By.id("email"));
+		sendvalues(email,"nishanthijaga@gmail.com");
+		
+		WebElement password = driver.findElement(By.name("password"));
+		sendvalues(password,"nisha1992");
+		WebElement loginbtn = driver.findElement(By.name("password"));
+		clickonElement(loginbtn);
+		
+		printScreen("screenshot1");
+	}
+
+	
+	}
+
+	
+		
